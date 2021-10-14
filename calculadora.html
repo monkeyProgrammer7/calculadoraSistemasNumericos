@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculadora.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="calculadora.js" type="text/javascript"></script>
+    <title>Calculadora</title>
+
+   
+</head>
+<body class="container">
+    <header >
+        <h1 >Calculadora</h1>
+
+    </header>
+<div>
+    <form >
+        <div class="form-group">
+            <label for="numeroUnoCalculadora">Ingrese el primer número </label>
+            <input type="number" class="form-control" id="numeroUnoCalculadora"  placeholder="solo se pueden ingresar números">
+            
+           
+          </div>
+          
+        </form>
+          <div> <label for="botonesBasesUno">Elija la base</label>
+              
+          </div>
+          <div id="botonesBasesUno">
+              <button type="button" class="btn btn-outline-light botonesBasesUno "  onclick="cambiarApariencia(this,'botonesBasesUno')">DECIMAL</button>
+              <button type="button" class="btn btn-outline-light botonesBasesUno" onclick="cambiarApariencia(this,'botonesBasesUno')">Hexadecimal</button>
+              <button type="button" class="btn btn-outline-light botonesBasesUno" onclick="cambiarApariencia(this,'botonesBasesUno')">OCTAL</button>
+              <button type="button" class="btn btn-outline-light botonesBasesUno" onclick="cambiarApariencia(this,'botonesBasesUno')">BINARIA</button>
+              <button type="button" class="btn btn-outline-light botonesBasesUno" onclick="cambiarApariencia(this,'botonesBasesUno')">GRAY</button>
+              
+          </div>
+          <br><br><br>
+          
+          <div> <label for="botonesOperador">Elija la operación</label>
+                  
+          </div>
+          <div id="botonesOperador">
+              <button type="button" class="btn btn-outline-light btn-lg botonesOperador"  onclick="cambiarApariencia(this,'botonesOperador')">+</button>
+              <button type="button" class="btn btn-outline-light btn-lg botonesOperador" onclick="cambiarApariencia(this,'botonesOperador')">-</button>
+              <button type="button" class="btn btn-outline-light btn-lg botonesOperador" onclick="cambiarApariencia(this,'botonesOperador')">x</button>
+              <button type="button" class="btn btn-outline-light btn-lg botonesOperador" onclick="cambiarApariencia(this,'botonesOperador')">÷</button>
+
+              
+          </div>
+          <br><br><br>
+          <form >
+            <div class="form-group">
+                <label for="numeroDosCalculadora">Ingrese el segundo número </label>
+                <input type="number" class="form-control" id="numeroDosCalculadora"  placeholder="solo se pueden ingresar números">
+               
+               
+              </div>
+            </form>
+              <div> <label for="botonesBasesDos">Elija la base</label>
+                  
+              </div>
+              <div id="botonesBasesDos">
+                  <button type="button" class="btn btn-outline-light botonesBasesDos"  onclick="cambiarApariencia(this,'botonesBasesDos')">DECIMAL</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesDos" onclick="cambiarApariencia(this,'botonesBasesDos')">Hexadecimal</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesDos" onclick="cambiarApariencia(this,'botonesBasesDos')">OCTAL</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesDos" onclick="cambiarApariencia(this,'botonesBasesDos')">BINARIA</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesDos" onclick="cambiarApariencia(this,'botonesBasesDos')">GRAY</button>
+              </div>
+              <br><br><br>
+              <div >
+                <button type="button" class="btn btn-outline-light calcular btn-lg"  onclick="cambiarApariencia(this,'calcular')">Calcular!</button>
+              </div>
+              <div>
+                <label for="resultado" class="col-sm-2 col-form-label">Resultado</label>
+                <input type="number" readonly class="form-control-plaintext" id="resultado" value="000000">
+              </div>
+              <div> <label for="botonesBasesDos">Elija la base</label>
+                  
+              </div>
+              <div id="botonesBasesTres">
+                  <button type="button" class="btn btn-outline-light botonesBasesTres"  onclick="cambiarApariencia(this,'botonesBasesTres')">DECIMAL</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesTres" onclick="cambiarApariencia(this ,'botonesBasesTres')">Hexadecimal</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesTres" onclick="cambiarApariencia(this,'botonesBasesTres')">OCTAL</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesTres" onclick="cambiarApariencia(this,'botonesBasesTres')">BINARIA</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesTres" onclick="cambiarApariencia(this,'botonesBasesTres')">GRAY</button>
+              </div>
+              <br><br><br>
+              
+    
+   
+</div>
+</body>
+</html>

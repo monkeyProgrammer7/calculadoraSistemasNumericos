@@ -1,0 +1,16 @@
+body{
+    background-image: url(img/fondo.png);
+    background-position:top center;
+    
+}
+.container{
+    color: rgb(29, 248, 164);
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ #resultado{
+     font-size: 200%;
+     color:rgb(29, 248, 164);
+     text-align: center;
+ }
