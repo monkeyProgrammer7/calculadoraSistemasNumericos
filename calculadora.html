@@ -20,7 +20,7 @@
     <form >
         <div class="form-group">
             <label for="numeroUnoCalculadora">Ingrese el primer número </label>
-            <input type="number" class="form-control" id="numeroUnoCalculadora"  placeholder="solo se pueden ingresar números">
+            <input type="text" class="form-control" id="numeroUnoCalculadora"  placeholder="ingrese un número">
             
            
           </div>
@@ -30,11 +30,11 @@
               
           </div>
           <div id="botonesBasesUno">
-              <button type="button" class="btn btn-outline-light botonesBasesUno "  onclick="cambiarApariencia(this,'botonesBasesUno')">DECIMAL</button>
-              <button type="button" class="btn btn-outline-light botonesBasesUno" onclick="cambiarApariencia(this,'botonesBasesUno')">Hexadecimal</button>
-              <button type="button" class="btn btn-outline-light botonesBasesUno" onclick="cambiarApariencia(this,'botonesBasesUno')">OCTAL</button>
-              <button type="button" class="btn btn-outline-light botonesBasesUno" onclick="cambiarApariencia(this,'botonesBasesUno')">BINARIA</button>
-              <button type="button" class="btn btn-outline-light botonesBasesUno" onclick="cambiarApariencia(this,'botonesBasesUno')">GRAY</button>
+              <button type="button" class="btn btn-outline-light botonesBasesUno "  onclick="cambiarApariencia(this,'botonesBasesUno'); capturarBaseNumeroUno('DEC')">DECIMAL</button>
+              <button type="button" class="btn btn-outline-light botonesBasesUno" onclick="cambiarApariencia(this,'botonesBasesUno'); capturarBaseNumeroUno('HEX')">HEXADECIMAL</button>
+              <button type="button" class="btn btn-outline-light botonesBasesUno" onclick="cambiarApariencia(this,'botonesBasesUno'); capturarBaseNumeroUno('OCT')">OCTAL</button>
+              <button type="button" class="btn btn-outline-light botonesBasesUno" onclick="cambiarApariencia(this,'botonesBasesUno'); capturarBaseNumeroUno('BIN')">BINARIA</button>
+              
               
           </div>
           <br><br><br>
@@ -43,10 +43,10 @@
                   
           </div>
           <div id="botonesOperador">
-              <button type="button" class="btn btn-outline-light btn-lg botonesOperador"  onclick="cambiarApariencia(this,'botonesOperador')">+</button>
-              <button type="button" class="btn btn-outline-light btn-lg botonesOperador" onclick="cambiarApariencia(this,'botonesOperador')">-</button>
-              <button type="button" class="btn btn-outline-light btn-lg botonesOperador" onclick="cambiarApariencia(this,'botonesOperador')">x</button>
-              <button type="button" class="btn btn-outline-light btn-lg botonesOperador" onclick="cambiarApariencia(this,'botonesOperador')">÷</button>
+              <button type="button" class="btn btn-outline-light btn-lg botonesOperador"  onclick="cambiarApariencia(this,'botonesOperador'); capturarOperador('SUM')">+</button>
+              <button type="button" class="btn btn-outline-light btn-lg botonesOperador" onclick="cambiarApariencia(this,'botonesOperador'); capturarOperador('RES')">-</button>
+              <button type="button" class="btn btn-outline-light btn-lg botonesOperador" onclick="cambiarApariencia(this,'botonesOperador'); capturarOperador('MUL')">x</button>
+              <button type="button" class="btn btn-outline-light btn-lg botonesOperador" onclick="cambiarApariencia(this,'botonesOperador'); capturarOperador('DIV')">÷</button>
 
               
           </div>
@@ -54,7 +54,7 @@
           <form >
             <div class="form-group">
                 <label for="numeroDosCalculadora">Ingrese el segundo número </label>
-                <input type="number" class="form-control" id="numeroDosCalculadora"  placeholder="solo se pueden ingresar números">
+                <input type="text" class="form-control" id="numeroDosCalculadora"  placeholder="ingrese un número">
                
                
               </div>
@@ -63,29 +63,29 @@
                   
               </div>
               <div id="botonesBasesDos">
-                  <button type="button" class="btn btn-outline-light botonesBasesDos"  onclick="cambiarApariencia(this,'botonesBasesDos')">DECIMAL</button>
-                  <button type="button" class="btn btn-outline-light botonesBasesDos" onclick="cambiarApariencia(this,'botonesBasesDos')">Hexadecimal</button>
-                  <button type="button" class="btn btn-outline-light botonesBasesDos" onclick="cambiarApariencia(this,'botonesBasesDos')">OCTAL</button>
-                  <button type="button" class="btn btn-outline-light botonesBasesDos" onclick="cambiarApariencia(this,'botonesBasesDos')">BINARIA</button>
-                  <button type="button" class="btn btn-outline-light botonesBasesDos" onclick="cambiarApariencia(this,'botonesBasesDos')">GRAY</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesDos"  onclick="cambiarApariencia(this,'botonesBasesDos');capturarBaseNumeroDos('DEC')">DECIMAL</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesDos" onclick="cambiarApariencia(this,'botonesBasesDos'); capturarBaseNumeroDos('HEX')">HEXADECIMAL</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesDos" onclick="cambiarApariencia(this,'botonesBasesDos'); capturarBaseNumeroDos('OCT')">OCTAL</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesDos" onclick="cambiarApariencia(this,'botonesBasesDos'); capturarBaseNumeroDos('BIN')">BINARIA</button>
+                
               </div>
               <br><br><br>
               <div >
-                <button type="button" class="btn btn-outline-light calcular btn-lg"  onclick="cambiarApariencia(this,'calcular')">Calcular!</button>
+                <button type="button" class="btn btn-outline-light calcular btn-lg"  onclick="cambiarApariencia(this,'botonesBasesTres'); mostrarResultado('porDefecto','botonesBasesTres')">Calcular!</button>
               </div>
               <div>
                 <label for="resultado" class="col-sm-2 col-form-label">Resultado</label>
-                <input type="number" readonly class="form-control-plaintext" id="resultado" value="000000">
+                <input type="text" readonly class="form-control-plaintext" id="resultado" value="000000">
               </div>
               <div> <label for="botonesBasesDos">Elija la base</label>
                   
               </div>
               <div id="botonesBasesTres">
-                  <button type="button" class="btn btn-outline-light botonesBasesTres"  onclick="cambiarApariencia(this,'botonesBasesTres')">DECIMAL</button>
-                  <button type="button" class="btn btn-outline-light botonesBasesTres" onclick="cambiarApariencia(this ,'botonesBasesTres')">Hexadecimal</button>
-                  <button type="button" class="btn btn-outline-light botonesBasesTres" onclick="cambiarApariencia(this,'botonesBasesTres')">OCTAL</button>
-                  <button type="button" class="btn btn-outline-light botonesBasesTres" onclick="cambiarApariencia(this,'botonesBasesTres')">BINARIA</button>
-                  <button type="button" class="btn btn-outline-light botonesBasesTres" onclick="cambiarApariencia(this,'botonesBasesTres')">GRAY</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesTres" aria-pressed="true" id='porDefecto' onclick="cambiarApariencia(this,'botonesBasesTres');cambiarResultado('DEC')">DECIMAL</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesTres" onclick="cambiarApariencia(this ,'botonesBasesTres');cambiarResultado('HEX')">HEXADECIMAL</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesTres" onclick="cambiarApariencia(this,'botonesBasesTres');cambiarResultado('OCT')">OCTAL</button>
+                  <button type="button" class="btn btn-outline-light botonesBasesTres" onclick="cambiarApariencia(this,'botonesBasesTres');cambiarResultado('BIN')">BINARIA</button>
+                 
               </div>
               <br><br><br>
               
